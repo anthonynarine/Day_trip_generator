@@ -1,2 +1,2 @@
 # Day_trip_generator
-First Python project of bootcamp
+1st Python project of bootcamp
