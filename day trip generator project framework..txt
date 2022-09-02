@@ -1,0 +1,51 @@
+DAY TRIP GENERATOR Project Framework
+
+Introduction
+
+This project is an opportunity to pull all of the fundamental concepts you’ve learned in Python (variables, data types, operators, conditionals, loops, functions, debugging, lists, and source control) and apply them in a single program.
+
+The Day Trip Generator will allow a user to have a random trip generated for them, making it less of a hassle to come up with trip ideas for the day! In it, you’ll utilize just a single Python file for all of the code and practice good debugging techniques, constantly testing every small chunk of code you write as you go along.
+
+Technologies
+
+Python
+
+Resources
+
+Documents
+
+· Day Trip Generator User Stories
+
+Other Resources
+
+· All of Week 1 and Week 2’s content will be beneficial in helping you finish this project. Be sure to have your Online Portal open for easy reference!
+
+Tasks
+
+1. Create a GitHub repository and clone it down to your local computer to store your code in a remote repository
+
+2. Create your Python project in Visual Studio Code
+
+3. Write the code for the project and be sure to test as you go along
+
+Setup Steps
+
+1. Create a GitHub repository on GitHub. Remember to use a Python .gitignore and add a README!
+
+2. Clone your repository down to your computer (referring to the Code Demo – Source Control video would be helpful here!)
+
+3. Create your project in Visual Studio Code and move the invisible .git folder and README file to the folder where your project is located.
+
+4. Make a test commit and check your repository to be sure the content has updated!
+
+5. Start coding the program first by going from the top of the user stories and working down. Decide how you will:
+
+a. Store the trip options for destinations, restaurants, transportation, and entertainment
+
+b. Get a random element from each of those sets of options
+
+c. Store those random elements to be used elsewhere!
+
+End Result
+
+Please see the “Project Walkthrough – Day Trip Generator” video for a walkthrough on what the end result could look like!
