@@ -1,9 +1,9 @@
 
                                
-                                # """Day trip generator project"""
+                                # """Day trip generator project - DevCodeCamp week 2 project"""
 
 import random
-from re import U
+
 
 #list of famous cities.
 cities = ["Newy York, New York", "Osaka, Japan", "Amsterdam, Netherlands",  "Toronto, Canada", "Frankfurt, Germany", "Vienna, Austria", "Georgetwon, Guyana",]
