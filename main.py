@@ -4,7 +4,7 @@
 
 import random
 
-#list of famous cities.
+#list of popular cities to visit
 cities = ["New York", "Osaka", "Amsterdam", "Frankfurt", "Georgetwon",]
 
 #list of Restaurant options in each city. 
@@ -14,14 +14,13 @@ amsterdam_restaurants = ["Jansz", "Wilde Zwijnen", "Stork",]
 frankfurt_restaurants = ["Emma Metzler", "Charirs", "No.16",]
 georgetown_restaurants = ["New Thriving", "Island Express", "Hibiscus",]
 
-
 #list of mode of transportation.
-type_of_transportation = ["Airplane", "Rail train", "Rental car", "Taxi", "Boat", "Walking", "Biking", ]
+type_of_transportation = ["airplane", "rail train", "rental car", "taxi", "boat", "walking", "biking", ]
 
 
 
 def greet_user():
-    """function to geet users"""
+    """function to greet users"""
     print (f"\tHello and welcome to the day trip planner!\n\n\t  Lets plan a day trip for you.\n")
 
    
@@ -34,7 +33,7 @@ while True:
         print (f"\nOk, lets try a different location.")      
         continue
     elif user_destination_choice == "Yes":
-        print (f"\n{destination}, is a great place to visit.")
+        print (f"\n\t{destination}, is a great place to visit.")
         print (f"\nLet's set you up with transportation.")
         break 
 
@@ -48,7 +47,7 @@ while True:
         print (f"\nOk, lets try a different mode.") 
         continue
     elif user_transport_choice == "Yes":
-        print(f"\n{transportation} is a great way to explore {destination}")
+        print(f"\n\tTraveling by {transportation} is a great way to explore {destination}.")
         break
 
 def top_rated_restaurant_in_cities ():
@@ -63,7 +62,7 @@ while True:
             continue
         else:
              user_restaurant_choice == "Yes"
-             print (f"{restaurant} is a great place to eat in {destination}")
+             print (f"\n\t{restaurant} is a great place to eat in {destination}")
              break
     if destination == "Osaka":
         restaurant = random.choice(osaka_restaurants)
@@ -73,17 +72,17 @@ while True:
             continue
         else:
              user_restaurant_choice == "Yes"
-             print (f"{restaurant} is a great place to eat in {destination}")
+             print (f"\n\t{restaurant} is a great place to eat in {destination}")
              break
     if destination == "Amsterdam":
         restaurant = random.choice(amsterdam_restaurants)
-        user_restaurant_choice = input (f"\nWould you like to {restaurant}? Enter Yes/No ").capitalize()
+        user_restaurant_choice = input (f"\nWould you like to dine at {restaurant}? Enter Yes/No ").capitalize()
         if user_restaurant_choice == "No":
             print (f"Ok, lets try a different place")
             continue
         else:
              user_restaurant_choice == "Yes"
-             print (f"{restaurant} is a great place to eat in {destination}")
+             print (f"\n\t{restaurant} is a great place to eat in {destination}")
              break
     if destination == "Frankfurt":
         restaurant = random.choice(frankfurt_restaurants)
@@ -97,14 +96,16 @@ while True:
              break
     if destination == "Georgetwon":
         restaurant = random.choice(georgetown_restaurants)
-        user_restaurant_choice = input (f"\nWould you like to try {restaurant}? Enter Yes/No ").capitalize()
+        user_restaurant_choice = input (f"\nWould you like to dine at {restaurant}? Enter Yes/No ").capitalize()
         if user_restaurant_choice == "No":
             print (f"Ok, lets try a different place")
             continue
         else:
              user_restaurant_choice == "Yes"
-             print (f"{restaurant} is a great place to eat in {destination}")
+             print (f"\n\t{restaurant} is a great place to eat in {destination}")
              break
+
+
 
     
         
