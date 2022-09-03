@@ -2,7 +2,11 @@
                                
                                 # """Day trip generator project - DevCodeCamp week 2 project"""
 
+import os
 import random
+
+#list of mode of transportation.
+type_of_transportation = ["airplane", "rail train", "rental car", "taxi", "boat", "walking", "biking", ]
 
 #list of popular cities to visit
 cities = ["New York", "Osaka", "Amsterdam", "Frankfurt", "Georgetwon",]
@@ -14,8 +18,12 @@ amsterdam_restaurants = ["Jansz", "Wilde Zwijnen", "Stork",]
 frankfurt_restaurants = ["Emma Metzler", "Charirs", "No.16",]
 georgetown_restaurants = ["New Thriving", "Island Express", "Hibiscus",]
 
-#list of mode of transportation.
-type_of_transportation = ["airplane", "rail train", "rental car", "taxi", "boat", "walking", "biking", ]
+#List of entertaining things to do per city. 
+new_york_entertainment = ["musium tour", "Central Park zoo", "Brooklyn Botanic Garden", ]
+osaka_entertainmetnt = ["Osaka Aquarium Kaiyukan", "Kuromon Market", "Ramen cooking class"]
+amsterdam_entertainment = ["Amsterdam Canal Cruise", "Van Gogh Museum", "ARTIS Amsterdam Royal Zoo"]
+frankfurt_entertainmet = ["Palmengarten Botanical Garden", "Senckenberg Natural History Museum", "Neuschwanstein Castle"]
+georgetown_entertainment = ["stabroke market", "Guyana Botanical Gardens", "Georgetown Lighthouse"]
 
 
 
@@ -25,7 +33,7 @@ def greet_user():
 
    
 def user_destion_selection():
-    """Randomly select a city for the user"""
+    """Randomly select a city destination for the user"""
 while True:
     destination = random.choice(cities)
     user_destination_choice =input(f'\nWe have selected {destination} as a destination would you like to go on this trip? Enter Yes/No? ').capitalize()
@@ -51,12 +59,12 @@ while True:
         break
 
 def top_rated_restaurant_in_cities ():
-    """Randomly suggest a restaurant to the user"""
+    """Randomly suggest a restaurant from the destination to the user"""
     print (f"Let find a place a nice restaurant")
 while True:
     if destination == "New York":
         restaurant = random.choice(new_york_restaurants)
-        user_restaurant_choice = input (f"\nWould you like to try {restaurant}? Enter Yes/No ").capitalize()
+        user_restaurant_choice = input (f"\nWould you like dine at {restaurant}? Enter Yes/No ").capitalize()
         if user_restaurant_choice == "No":
             print (f"Ok, lets try a different place")
             continue
@@ -66,7 +74,7 @@ while True:
              break
     if destination == "Osaka":
         restaurant = random.choice(osaka_restaurants)
-        user_restaurant_choice = input (f"\nWould you like to try {restaurant}? Enter Yes/No ").capitalize()
+        user_restaurant_choice = input (f"\nWould you dine at {restaurant}? Enter Yes/No ").capitalize()
         if user_restaurant_choice == "No":
             print (f"Ok, lets try a different place")
             continue
@@ -86,7 +94,7 @@ while True:
              break
     if destination == "Frankfurt":
         restaurant = random.choice(frankfurt_restaurants)
-        user_restaurant_choice = input (f"\nWould you like to try {restaurant}? Enter Yes/No ").capitalize()
+        user_restaurant_choice = input (f"\nWould you like to dine at {restaurant}? Enter Yes/No ").capitalize()
         if user_restaurant_choice == "No":
             print (f"Ok, lets try a different place")
             continue
@@ -104,6 +112,44 @@ while True:
              user_restaurant_choice == "Yes"
              print (f"\n\t{restaurant} is a great place to eat in {destination}")
              break
+
+def user_entertainment():
+    """Randomly suggest things to do in the destination city """
+while True:
+    if destination == "New_york":
+        entertainment = random.choice(new_york_entertainment)
+        print (f"\nThe day's entertainment will include a {entertainment}.")
+        break
+
+    elif destination == "Osaka":
+        entertainment = random.choice(osaka_entertainmetnt)
+        print (f"\nThe day's entertainment will include a {entertainment}.")
+        break 
+            
+    elif destination == "Frankfurt":
+        entertainment = random.choice(amsterdam_entertainment)
+        print (f"\nThe day's entertainment will include a {entertainment}.")
+        break
+            
+    else:
+        entertainment = random.choice(georgetown_entertainment)
+        print (f"\nThe day's entertainment will include a {entertainment}.")
+        break
+
+
+            
+
+
+    
+        
+
+       
+
+
+    
+
+
+
 
 
 
