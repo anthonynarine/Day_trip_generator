@@ -28,7 +28,7 @@ georgetown_entertainment = ["Stabroke market", "Guyana Botanical Gardens", "Geor
 
 def greet_user():
     """function to greet users"""
-    return print (f"\n\tHello and welcome to the day trip planner!\n\n\t  Lets plan a day trip for you.\n")
+    print (f"\n\n\tHello and welcome to the day trip planner!\n\n\t\tLets plan a day for you.\n")
 greet_user()
 
    
@@ -150,24 +150,34 @@ while True:
             
     else:
         entertainment = random.choice(georgetown_entertainment)
-        print (f"\nThe day's entertainment will include a visit to {entertainment}.\n")
+        print (f"\nThe days entertainment will include a visit to {entertainment}.\n")
         break
 
+def trip_confirmation():
+    """function to confirm day trip"""
+    confirm = True
+    while confirm == True:
+        message = f"\tTo review your destination is: {destination}.\n\tYou will be traveing by: {transportation.capitalize()}.\n\tEentertainment will be a visit to: {entertainment}.\n"
+        print (message)
+        user_confirmation = input ("To confirm this trip enter 'Yes' - Enter 'No' to start over: ").capitalize()
+        if user_confirmation == "Yes":
+            print ("\nYour trip is confirmed, have an amazing time.\n\n")
+            confirm = False
+        else:
+            if message != "Yes":
+                return
 
-message = f"To confirm your destination is: {destination}.\nYour will be traveing by: {transportation}.\nEentertainment will be a visit to: {entertainment}.\n\n"
-print (message)
 
-            
+trip_confirmation()
 
 
   
   
-  
-  # bug1 - NY entertainment outputs else statement randomly selecting from georgetown_entertainment. 
-  # fixed "New_York" changed to "New York".
+# bug1 - NY entertainment outputs else statement randomly selecting from georgetown_entertainment. 
+# fixed "New_York" changed to "New York".
 
-  # bug2 - mode of transport Osk.
-  # fixed " train" to "train.
+# bug2 - mode of transport Osk.
+# fixed " train" to "train.
 
 # bug3 Frankfurt's entertainment outputs from Amsterdam's list.
 # fixed - updated variable to match.
