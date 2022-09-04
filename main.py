@@ -2,11 +2,10 @@
                                
                                 # """Day trip generator project - DevCodeCamp week 2 project"""
 
-import os
 import random
 
 #list of mode of transportation.
-type_of_transportation = ["airplane", "rail train", "rental car", "taxi", "boat", "walking", "biking", ]
+type_of_transportation = ["airplane", "train", "rental car", "taxi", "boat", "walking", "bike", ]
 
 #list of popular cities to visit
 cities = ["New York", "Osaka", "Amsterdam", "Frankfurt", "Georgetwon",]
@@ -30,6 +29,7 @@ georgetown_entertainment = ["Stabroke market", "Guyana Botanical Gardens", "Geor
 def greet_user():
     """function to greet users"""
     return print (f"\n\tHello and welcome to the day trip planner!\n\n\t  Lets plan a day trip for you.\n")
+greet_user()
 
    
 def user_destion_selection():
@@ -66,7 +66,7 @@ def top_rated_restaurant_in_cities ():
 while True:
     if destination == "New York":
         restaurant = random.choice(new_york_restaurants)
-        user_restaurant_choice = input (f"\nWould you like dine at {restaurant}? Enter Yes/No ").capitalize()
+        user_restaurant_choice = input (f"\nWould you like to dine at {restaurant}? Enter Yes/No ").capitalize()
         if user_restaurant_choice != "Yes":
             print (f"Ok, lets try a different place")
             continue
@@ -78,7 +78,7 @@ while True:
             
     if destination == "Osaka":
         restaurant = random.choice(osaka_restaurants)
-        user_restaurant_choice = input (f"\nWould you dine at {restaurant}? Enter Yes/No ").capitalize()
+        user_restaurant_choice = input (f"\nWould you like to dine at {restaurant}? Enter Yes/No ").capitalize()
         
         if user_restaurant_choice != "Yes":
             print (f"Ok, lets try a different place")
@@ -92,7 +92,7 @@ while True:
     if destination == "Amsterdam":
         restaurant = random.choice(amsterdam_restaurants)
         user_restaurant_choice = input (f"\nWould you like to dine at {restaurant}? Enter Yes/No ").capitalize()
-        if user_restaurant_choice != "yes":
+        if user_restaurant_choice != "Yes":
             print (f"Ok, lets try a different place")
             continue
        
@@ -128,49 +128,56 @@ while True:
 def user_entertainment():
     """Randomly suggest things to do in the destination city """
 while True:
-    if destination == "New_York": 
+    if destination == "New York": 
         entertainment = random.choice(new_york_entertainment)
-        print (f"\nThe day's entertainment will include a visit to {entertainment}.")
+        print (f"\nThe day's entertainment will include a visit to {entertainment}.\n")
         break
 
     elif destination == "Osaka":
         entertainment = random.choice(osaka_entertainmetnt)
-        print (f"\nThe day's entertainment will include a visit to {entertainment}.")
+        print (f"\nThe day's entertainment will include a visit to {entertainment}.\n")
         break 
             
     elif destination == "Frankfurt":
+        entertainment = random.choice(frankfurt_entertainmet)
+        print (f"\nThe day's entertainment will include a visit to {entertainment}.\n")
+        break
+
+    elif destination == "Amsterdam":
         entertainment = random.choice(amsterdam_entertainment)
-        print (f"\nThe day's entertainment will include a visit to {entertainment}.")
+        print (f"\nThe day's entertainment will include a visit to {entertainment}.\n")
         break
             
     else:
         entertainment = random.choice(georgetown_entertainment)
-        print (f"\nThe day's entertainment will include a visit to {entertainment}.")
+        print (f"\nThe day's entertainment will include a visit to {entertainment}.\n")
         break
 
-def run():
-    """Master function to run all the above function"""
-    greet_user()
-    user_destion_selection()
-    mode_of_transportation()
-    top_rated_restaurant_in_cities()
-    user_entertainment()
-message = f"To confirm your destination is:{destination}.\nYour will traveing by {transportation}.\nEentertainment will be a visit to {entertainment}.\n\n"
 
-run()
+message = f"To confirm your destination is: {destination}.\nYour will be traveing by: {transportation}.\nEentertainment will be a visit to: {entertainment}.\n\n"
 print (message)
 
             
 
 
+  
+  
+  
+  # bug1 - NY entertainment outputs else statement randomly selecting from georgetown_entertainment. 
+  # fixed "New_York" changed to "New York".
+
+  # bug2 - mode of transport Osk.
+  # fixed " train" to "train.
+
+# bug3 Frankfurt's entertainment outputs from Amsterdam's list.
+# fixed - updated variable to match.
+
+# bug4 Amsterdam's entertainmet values defaults to else statement.
+# fixed - elif statement added for Amsterdam
+
+
     
-        
-
-       
-
-
-    
-
+ 
 
 
 
