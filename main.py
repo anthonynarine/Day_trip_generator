@@ -155,7 +155,7 @@ def run():
     mode_of_transportation()
     top_rated_restaurant_in_cities()
     user_entertainment()
-message = f"Your destination {destination}, your will traveing by {transportation} and the day's entertainment will be a {entertainment}\n\n"
+message = f"To confirm your destination is:{destination}.\nYour will traveing by {transportation}.\nEentertainment will be a visit to {entertainment}.\n\n"
 
 run()
 print (message)
@@ -177,18 +177,5 @@ print (message)
 
 
     
-        
-
-
-
-# def run():
-#     greet_user()
-#     user_destination_choice
-#     mode_of_transportation
-#     top_rated_restaurant_in_cities
-# run()
-
-
-
 
 
